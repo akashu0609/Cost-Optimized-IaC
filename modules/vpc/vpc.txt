@@ -1,0 +1,39 @@
+let’s build out a Terraform VPC + Subnet module that you can drop straight 
+into your project repo. This will give you a solid starting point for 
+AWS networking, which is the backbone of your cost‑optimized IaC project.
+
+--> Structure for:
+modules/
+└── vpc/
+    ├── main.tf
+    ├── variables.tf
+    └── outputs.tf
+
+
+let’s extend the VPC module with a NAT Gateway setup 
+so that instances in the private subnet can reach the internet 
+(for updates, pulling Docker images, etc.) without being directly exposed. 
+This is a real-world DevOps pattern you’ll use for Jenkins agents, 
+app servers, or Kubernetes worker nodes.
+
+How to Use in  ├── environments/dev/main.tf
+
+✅ This gives you a production-ready VPC with public + private subnets, 
+cost‑tracking tags, and internet access for the public subnet. 
+From here, you can plug in your compute module (EC2/EKS) and 
+security module (IAM, Secrets Manager).
+
+modules/
+└── vpc/
+    ├── main(updated with NAT Gateway).tf
+    ├── variables.tf
+    └── outputs(updated with NAT Gateway).tf
+
+-->How This Works
+#Public Subnet → Has Internet Gateway (IGW) for inbound/outbound traffic.
+
+#Private Subnet → Routes outbound traffic through NAT Gateway in the public subnet.
+
+#Result → Private instances can download packages, connect to APIs, 
+or pull Docker images, but remain inaccessible from the internet.
+

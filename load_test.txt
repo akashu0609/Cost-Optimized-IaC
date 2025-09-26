@@ -1,0 +1,2 @@
+chmod +x load_test.sh
+./load_test.sh <your-alb-dns>
