@@ -21,7 +21,7 @@ It focuses on **cost optimization, elasticity, and security automation**, reduci
 ---
 
 ## 🏗️ Architecture
-```mermaid
+
 flowchart TD
     A[Users] -->|HTTP Requests| B[ALB - Public Subnet]
     B --> C[Auto Scaling Group - Private Subnet]
@@ -66,7 +66,7 @@ Load Test → Apache Benchmark triggers scaling.
 
 Monitoring → Grafana dashboard shows scaling in real time.
 
-.
+---
 
 📊 Demo Flow
 Deploy infra via Jenkins pipeline.
@@ -95,7 +95,7 @@ terraform-project/
 │   └── load_test.sh
 ├── Jenkinsfile
 └── README.md
-
+---
 
 🗣️ Interview Story (STAR)
 Situation: Cloud costs were rising due to overprovisioned resources and inconsistent IAM policies.
@@ -106,6 +106,8 @@ Action: Designed Terraform modules for AWS & GCP, integrated Infracost, automate
 
 Result: Achieved 25% monthly cost reduction, improved compliance posture, and delivered a reusable IaC framework for multi‑cloud deployments.
 
+---
+
 🚀 Next Steps
 Extend to Azure for full tri‑cloud coverage.
 
@@ -114,10 +116,9 @@ Add cost dashboards in Grafana (FinOps visibility).
 Integrate security scanning (Snyk, Trivy) into CI/CD.
 
 
----
 
-Mermaid Diagram
-
+Mermaid Diagram:
+```
 flowchart TD
     subgraph Public_Subnet["🌐 Public Subnet"]
         ALB[Application Load Balancer]
@@ -152,4 +153,4 @@ flowchart TD
         Terraform --> ASG
         Terraform --> NAT
     end
-
+```
