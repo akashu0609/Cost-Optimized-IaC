@@ -17,21 +17,6 @@ It focuses on **cost optimization, elasticity, and security automation**, reduci
 
 ---
 
-## 🏗️ Architecture
-
-flowchart TD
-    A[Users] -->|HTTP Requests| B[ALB - Public Subnet]
-    B --> C[Auto Scaling Group - Private Subnet]
-    C --> D[EC2 App Instances]
-    C --> E[(NAT Gateway)]
-    E --> F[Internet]
-    D --> G[(Secrets Manager)]
-    D --> H[(CloudWatch Metrics)]
-    H --> I[Prometheus Exporter]
-    I --> J[Grafana Dashboard]
-    J --> K[Developers/Stakeholders]
-
----
 
 ⚙️ Tech Stack
 IaC: Terraform (modular, reusable)
@@ -112,6 +97,21 @@ Result: Achieved 25% monthly cost reduction, improved compliance posture, and de
 
 ---
 
+## 🏗️ Architecture
+
+flowchart TD
+    A[Users] -->|HTTP Requests| B[ALB - Public Subnet]
+    B --> C[Auto Scaling Group - Private Subnet]
+    C --> D[EC2 App Instances]
+    C --> E[(NAT Gateway)]
+    E --> F[Internet]
+    D --> G[(Secrets Manager)]
+    D --> H[(CloudWatch Metrics)]
+    H --> I[Prometheus Exporter]
+    I --> J[Grafana Dashboard]
+    J --> K[Developers/Stakeholders]
+
+---
 
 
 ```Mermaid 
