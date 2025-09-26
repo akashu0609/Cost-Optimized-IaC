@@ -1,6 +1,3 @@
-et’s package everything we’ve built into a GitHub‑ready README.md structure. This will make your project portfolio‑polished and easy for recruiters or interviewers to understand at a glance.
-
-📘 README Template for Your Project
 # 🚀 Cost‑Optimized Infrastructure as Code (IaC)
 
 ## 📌 Overview
@@ -95,6 +92,7 @@ terraform-project/
 │   └── load_test.sh
 ├── Jenkinsfile
 └── README.md
+
 ---
 
 🗣️ Interview Story (STAR)
