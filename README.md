@@ -31,6 +31,8 @@ flowchart TD
     I --> J[Grafana Dashboard]
     J --> K[Developers/Stakeholders]
 
+---
+
 ⚙️ Tech Stack
 IaC: Terraform (modular, reusable)
 
@@ -45,6 +47,8 @@ FinOps: Infracost
 Security: IAM automation, Secrets Manager
 
 Testing: Apache Benchmark (ab)
+
+---
 
 🚦 CI/CD Pipeline Flow
 Checkout → Pull Terraform code from GitHub.
@@ -76,6 +80,8 @@ CPU spikes above 70% → ASG scales out.
 
 Requests drop → ASG scales back in.
 
+---
+
 📂 Repository Structure
 
 terraform-project/
@@ -106,17 +112,9 @@ Result: Achieved 25% monthly cost reduction, improved compliance posture, and de
 
 ---
 
-🚀 Next Steps
-Extend to Azure for full tri‑cloud coverage.
-
-Add cost dashboards in Grafana (FinOps visibility).
-
-Integrate security scanning (Snyk, Trivy) into CI/CD.
 
 
-
-Mermaid Diagram:
-```
+```Mermaid 
 flowchart TD
     subgraph Public_Subnet["🌐 Public Subnet"]
         ALB[Application Load Balancer]
@@ -151,4 +149,3 @@ flowchart TD
         Terraform --> ASG
         Terraform --> NAT
     end
-```
