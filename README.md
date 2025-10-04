@@ -72,14 +72,14 @@ Requests drop → ASG scales back in.
 terraform-project/
 
 ├── modules/ --> 
-    1 ─ vpc/
-    2 ─ compute/
-    3 ─ iam/
-    4 ─ storage/
+    1 ─ vpc,
+    2 ─ compute,
+    3 ─ iam,
+    4 ─ storage
     
 ├── environments/ --> 
-    1 ─ dev/
-    2 ─ staging/
+    1 ─ dev,
+    2 ─ staging,
     3 ─ prod/
     
 ├── scripts/ -->
