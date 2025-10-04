@@ -71,17 +71,21 @@ Requests drop → ASG scales back in.
 
 terraform-project/
 ├── modules/
-│   ├── vpc/
-│   ├── compute/
-│   ├── iam/
-│   └── storage/
+    ├── vpc/
+    ├── compute/
+    ├── iam/
+    └── storage/
+    
 ├── environments/
-│   ├── dev/
-│   ├── staging/
-│   └── prod/
+    ├── dev/
+    ├── staging/
+    └── prod/
+    
 ├── scripts/
-│   └── load_test.sh
+    └── load_test.sh
+    
 ├── Jenkinsfile
+
 └── README.md
 
 ---
