@@ -80,7 +80,7 @@ terraform-project/
 ├── environments/ --> 
     1 ─ dev,
     2 ─ staging,
-    3 ─ prod/
+    3 ─ prod
     
 ├── scripts/ -->
     1 ─ load_test.sh
